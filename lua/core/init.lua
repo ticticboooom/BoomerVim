@@ -20,15 +20,5 @@ require('packer').startup(function(use)
   end
 end)
 
-bvim.load_config('IndentOMatic')
-bvim.load_config('NvimTree')
-bvim.load_config('NvimWebDevicons')
-bvim.load_config('Windline')
-bvim.load_config('Mason')
-bvim.load_config('NullLs')
-bvim.load_config('LspConfig')
-bvim.load_config('LuaSnip')
-bvim.load_config('Cmp')
-bvim.load_config('Dressing')
-
+require('config')
 require("lsp")

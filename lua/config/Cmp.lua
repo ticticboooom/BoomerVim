@@ -16,7 +16,6 @@ sources = {
         { name = "nvim_lsp" },
       { name = "path" },
       { name = "luasnip" },
-      { name = "cmp_tabnine" },
       { name = "nvim_lua" },
       { name = "buffer" },
       { name = "calc" },
@@ -57,3 +56,11 @@ mapping = {
       ["<S-Tab>"] = cmp.mapping(cmp.mapping.select_prev_item(), { "i", "s" }),
 }
 })
+
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+
+local result = {}
+
+result.caps = capabilities
+return result
